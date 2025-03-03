@@ -9,7 +9,7 @@ scenarios:
           url: '/balance'
           json:
             userId: 1
-            amount: 100
+            amount: -2
           capture:
             - json: '$.balance'
               as: 'balance'
