@@ -1,0 +1,18 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 60
+      arrivalRate: 180
+scenarios:
+  - flow:
+      - patch:
+          url: '/balance'
+          json:
+            userId: 1
+            amount: -2
+          capture:
+            - json: '$.balance'
+              as: 'balance'
+metrics:
+  - http.codes.4xx
+  - http.codes.5xx

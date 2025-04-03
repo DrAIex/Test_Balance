@@ -1,0 +1,30 @@
+{
+  "name": "test-balance",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "artillery run load_test.yml",
+    "start": "node server.js",
+    "migrate": "sequelize-cli db:migrate",
+    "migrate:undo": "sequelize-cli db:migrate:undo",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "joi": "^17.12.2",
+    "pg": "^8.13.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5",
+    "umzug": "^3.8.2"
+  },
+  "devDependencies": {
+    "artillery": "^2.0.22",
+    "nodemon": "^3.0.3",
+    "sequelize-cli": "^6.6.2"
+  }
+}
